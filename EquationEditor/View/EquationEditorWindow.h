@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "Presenter/EquationPresenter.h"
 
+
 class CEquationEditorWindow : public IEditorView {
 public:
     CEquationEditorWindow();
