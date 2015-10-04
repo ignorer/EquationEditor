@@ -1,5 +1,5 @@
 ﻿#include "resource.h"
-
+#include "Toolbar.h"
 #include "View/EquationEditorWindow.h"
 
 const wchar_t* const CEquationEditorWindow::className = L"EquationEditorWindow";
@@ -43,6 +43,7 @@ void CEquationEditorWindow::OnCreate() {
 	// Добавляем меню
 	HMENU hMenu = ::LoadMenu( hInstance, MAKEINTRESOURCE( IDR_MENU1 ) );
 	::SetMenu( hwnd, hMenu );
+	MyCreateToolbar(hwnd);
 }
 
 void CEquationEditorWindow::OnSize( int cxSize, int cySize ) {
