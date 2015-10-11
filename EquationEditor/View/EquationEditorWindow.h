@@ -40,11 +40,19 @@ public:
 
 	void OnLButtonDown( int xMousePos, int yMousePos );
 
+	void OnRButtonDown(int xMousePos, int yMousePos);
+
 	void OnWmCommand( WPARAM wParam, LPARAM lParam );
 
 	void OnKeyDown( WPARAM wParam );
 
 	void OnMouseMove( WPARAM wParam, int x, int y );
+
+	void InitMenu( HMENU hmenu );
+
+	BOOL EditCopy( VOID );
+	VOID EditPaste( VOID );
+	//VOID EditDelete( VOID );
 protected:
     void OnDestroy();
 
@@ -65,4 +73,6 @@ private:
     static LRESULT __stdcall equationEditorWindowProc(HWND handle, UINT message, WPARAM wParam, LPARAM lParam);
 
 	HFONT getFont( int height );
+
+	HMENU hMenuPopup;
 };
